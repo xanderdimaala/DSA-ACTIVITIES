@@ -25,7 +25,7 @@ void bubbleSort(){
 
 }
 
-//Searching Operations
+
 int BinarySearch(int num, int lowest, int highest){
     while(lowest <= highest){
         int middle = lowest +((highest - 1) /2);
@@ -104,19 +104,19 @@ string InsertAtSortedArray(int num){
             }
         }
 
-        for(int i = NumElem; i>=position; i--){ //loop through the array
-            myArray[i + 1] = myArray[i]; //move each elements from left to right
+        for(int i = NumElem; i>=position; i--){ 
+            myArray[i + 1] = myArray[i]; 
         }
 
-        myArray[position] = num; //insert new element at the appropriate position
+        myArray[position] = num; 
         NumElem++;
         return "An element is successfully inserted at a sorted array! \n";
     }
-    //if array is full return this error message
+    
     return "The array is full. Please remove elements before inserting new one. \n";
 }
 
-//Delete from the end
+
 string DeleteFromTheEnd(){
     if(NumElem != 0){
         NumElem--;
@@ -125,7 +125,7 @@ string DeleteFromTheEnd(){
     return "The array is underflow! Delete is not possible";
 }
 
-//Delete from the beginning
+
 string DeleteFromTheBeginnning(){
     if(NumElem != 0){
         for(int i = 0; i<= NumElem; i++){
